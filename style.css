@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Open+Sans:wght@300;400&family=Poiret+One&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --page-1-color: teal;
+  --page-2-color: #fe6e02;
+  --page-3-color: #d82b2d;
+  --page-4-color: #1b833f;
+  --speed: 2s;
+}
+
+body {
+  font-family: 'Poiret One', sans-serif;
+  color: #fff;
+  overflow: hidden;
+  line-height: 1.2rem;
+}
+#page1 {
+  background-color: var(--page-1-color);
+}
+#page2 {
+  background-color: var(--page-2-color);
+}
+#page3 {
+  background-color: var(--page-3-color);
+}
+#page4 {
+  background-color: var(--page-4-color);
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5rem;
+  padding: 0 50px;
+}
+.page h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  margin: 38px;
+}
+.page p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #fff;
+  color: teal;
+  margin-top: 20px;
+  padding: 18px 20px;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+i {
+  margin-left: 10px;
+}
+
+.btn:hover {
+  background-color: cadetblue;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* use of animation in h1 and p */
+#page1 h1 {
+  transform: translateY(-1200px);
+  animation: animateHead 2.5s forwards ease-in;
+}
+@keyframes animateHead {
+  to {
+    transform: translateY(0);
+  }
+}
+#page1 p {
+  transform: translateX(-1500px);
+  animation: animatePara var(--speed) ease-in 1s forwards;
+}
+@keyframes animatePara {
+  to {
+    transform: translateX(0);
+  }
+}
